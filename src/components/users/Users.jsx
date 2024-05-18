@@ -1,11 +1,11 @@
 import React, { memo } from "react";
-import "../products/Products.css";
+import "../users/Users.css";
 import axios from "../../api";
 
-const Products = ({ data, isAdmin, setReload }) => {
+const Users = ({ data2, isAdmin, setReload }) => {
   const handleDelete = (id) => {
     axios
-      .delete(`/products/${id}`)
+      .delete(`/users/${id}`)
       .then((res) => {
         console.log(res);
         setReload((p) => !p);
@@ -13,11 +13,11 @@ const Products = ({ data, isAdmin, setReload }) => {
       .catch((res) => console.log(res));
   };
 
-  let productItems = data?.map((e) => (
+  let userItems = data2?.map((e) => (
     <div key={e.id} className="card">
-      <img src={e.image} alt="product" />
+      <img src={e.image} alt="user" />
       <h3>{e.name}</h3>
-      <p>${e.price}</p>
+      <p>${e.age}</p>
       {isAdmin ? (
         <>
           <button onClick={() => handleDelete(el.id)}>Delete</button>
@@ -29,9 +29,10 @@ const Products = ({ data, isAdmin, setReload }) => {
   ));
   return (
     <div className="container">
-      <div className="product_cards">{productItems}</div>
+      <h2>Users</h2>
+      <div className="user_cards">{userItems}</div>
     </div>
   );
 };
 
-export default memo(Products);
+export default memo(Users);

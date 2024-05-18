@@ -18,6 +18,9 @@ const Navbar = () => {
           <NavLink className="nav_link" to={"/"}>
             Home
           </NavLink>
+          <NavLink className="nav_link" to={"/users"}>
+            Users
+          </NavLink>
           <NavLink
             className="nav_link "
             to={isLogin ? "/admin/create-product" : "/login"}

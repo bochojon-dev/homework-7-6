@@ -7,7 +7,7 @@ const ManageProducts = () => {
   let { data } = useFetch("/products", reload);
   return (
     <div>
-      <h2>Manage Users</h2>
+      <h2 style={{ "padding-top": 40 }}>Manage Users</h2>
       <Products setReload={setReload} isAdmin={true} data={data} />
     </div>
   );

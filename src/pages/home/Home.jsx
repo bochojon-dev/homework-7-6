@@ -3,10 +3,11 @@ import useFetch from "../hooks/UseFetch";
 
 const Home = () => {
   let { data } = useFetch("/products");
+  let { data2 } = useFetch("/users");
   return (
     <div className="home">
       <h2>Home</h2>
-      <Products isAdmin={false} data={data} />
+      <Products isAdmin={false} data2={data2} data={data} />
     </div>
   );
 };

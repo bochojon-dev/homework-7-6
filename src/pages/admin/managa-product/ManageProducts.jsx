@@ -8,7 +8,7 @@ const ManageProducts = () => {
   console.log(data);
   return (
     <div>
-      <h2>ManageProducts</h2>
+      <h2 style={{ "padding-top": 40 }}>ManageProducts</h2>
       <Products setReload={setReload} isAdmin={true} data={data} />
     </div>
   );

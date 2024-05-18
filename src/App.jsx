@@ -11,6 +11,7 @@ import ManageUsers from "./pages/admin/manage-users/ManageUsers";
 import NotFound from "./pages/not-found/NotFound";
 import Home from "./pages/home/Home";
 import { ToastContainer } from "react-toastify";
+import Users from "./components/users/Users";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/users" element={<Users />} />
         <Route path="/login" element={<Login />} />
 
         <Route path="/" element={<Auth />}>

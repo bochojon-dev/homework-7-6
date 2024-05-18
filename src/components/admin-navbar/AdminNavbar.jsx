@@ -8,9 +8,6 @@ const AdminNavbar = ({ setClose }) => {
       <button style={{ padding: 0 }} onClick={() => setClose((p) => !p)}>
         <IoIosMenu />
       </button>
-      <div>
-        <p>John doe</p>
-      </div>
     </div>
   );
 };

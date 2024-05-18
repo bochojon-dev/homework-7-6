@@ -19,7 +19,7 @@ const CreateProduct = () => {
   };
   return (
     <div>
-      <h2>Create User</h2>
+      <h2 style={{ "padding-top": 40 }}>Create User</h2>
       <form onSubmit={handleCreate} action="">
         <input
           required
