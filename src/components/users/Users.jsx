@@ -1,38 +1,44 @@
-import React, { memo } from "react";
-import "../users/Users.css";
-import axios from "../../api";
+// import React, { memo } from "react";
+// import "../users/Users.css";
+// // import axios from "../../api";
+// import Products from "../products/Products";
 
-const Users = ({ data2, isAdmin, setReload }) => {
-  const handleDelete = (id) => {
-    axios
-      .delete(`/users/${id}`)
-      .then((res) => {
-        console.log(res);
-        setReload((p) => !p);
-      })
-      .catch((res) => console.log(res));
-  };
+// const Users = () => {
+//   //   let userItems = data2?.map((e) => (
+//   //     <div key={e.id} className="card">
+//   //       <img src={e.image} alt="user" />
+//   //       <h3>{e.name}</h3>
+//   //       <p>${e.age}</p>
+//   //       {isAdmin ? (
+//   //         <>
+//   //           <button>Delete</button>
+//   //         </>
+//   //       ) : (
+//   //         <></>
+//   //       )}
+//   //     </div>
+//   //   ));
+//   return (
+//     <div style={{ paddingTop: 100 }} className="users container">
+//       <h2>Users</h2>
+//       <Products />
+//     </div>
+//   );
+// };
 
-  let userItems = data2?.map((e) => (
-    <div key={e.id} className="card">
-      <img src={e.image} alt="user" />
-      <h3>{e.name}</h3>
-      <p>${e.age}</p>
-      {isAdmin ? (
-        <>
-          <button onClick={() => handleDelete(el.id)}>Delete</button>
-        </>
-      ) : (
-        <></>
-      )}
-    </div>
-  ));
+// export default memo(Users);
+import Products from "../../components/products/Products";
+// import useFetch from "../hooks/UseFetch";
+
+const Users = () => {
+  //   let { data } = useFetch("/products");
+  //   let { data2 } = useFetch("/users");
   return (
-    <div className="container">
+    <div className="user">
       <h2>Users</h2>
-      <div className="user_cards">{userItems}</div>
+      <Products />
     </div>
   );
 };
 
-export default memo(Users);
+export default Users;

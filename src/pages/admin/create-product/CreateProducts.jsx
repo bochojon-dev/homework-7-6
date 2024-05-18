@@ -20,7 +20,7 @@ const CreateProduct = () => {
   };
   return (
     <div>
-      <h2 style={{ "padding-top": 40 }}>CreateProduct</h2>
+      <h2 style={{ paddingTop: 40 }}>CreateProduct</h2>
       <form onSubmit={handleCreate} action="">
         <input
           required
