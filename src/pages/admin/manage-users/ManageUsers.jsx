@@ -1,11 +1,16 @@
-import React from "react";
+import { useState } from "react";
+import Products from "../../../components/products/Products";
+import useFetch from "../../hooks/UseFetch";
 
-const ManageUsers = () => {
+const ManageProducts = () => {
+  const [reload, setReload] = useState(true);
+  let { data } = useFetch("/products", reload);
   return (
     <div>
-      <h2>ManageUsers</h2>
+      <h2>Manage Users</h2>
+      <Products setReload={setReload} isAdmin={true} data={data} />
     </div>
   );
 };
 
-export default ManageUsers;
+export default ManageProducts;

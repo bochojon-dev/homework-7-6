@@ -5,7 +5,7 @@ import useFetch from "../../hooks/UseFetch";
 const ManageProducts = () => {
   const [reload, setReload] = useState(true);
   let { data } = useFetch("/products", reload);
-
+  console.log(data);
   return (
     <div>
       <h2>ManageProducts</h2>
