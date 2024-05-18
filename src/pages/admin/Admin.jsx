@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import Sidebar from "../../components/sidebar/Sidebar";
-// import "./Admin.css";
+import "../admin/Admin.css";
 import { Outlet } from "react-router-dom";
 import AdminHeader from "../../components/admin-navbar/AdminNavbar";
 
 const Admin = () => {
-  const [toggle, setToggle] = useState(false);
+  const [close, setClose] = useState(false);
   return (
     <>
-      <div className={`admin ${toggle ? "close" : ""}`}>
+      <div className={`admin ${close ? "close" : ""}`}>
         <Sidebar />
         <div>
-          <AdminHeader setToggle={setToggle} />
+          <AdminHeader setToggle={setClose} />
           <Outlet />
         </div>
       </div>

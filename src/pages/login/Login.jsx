@@ -1,4 +1,5 @@
 import React, { memo, useState } from "react";
+import "../login/Login.css";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
@@ -17,9 +18,9 @@ const Login = () => {
     axios
       .post("https://dummyjson.com/auth/login", user)
       .then((res) => {
-        // toast.success("welcome")
+        toast.success("welcome");
         localStorage.setItem("x-auth-token", res.data.token);
-        navigate("/admin/create");
+        navigate("/admin/create-product");
       })
       .catch((err) => {
         console.log(err);
@@ -29,9 +30,8 @@ const Login = () => {
 
   return (
     <div className="login">
-      <h2>Login</h2>
-
-      <form onSubmit={handleLogin}>
+      <form className="form" onSubmit={handleLogin}>
+        <h2>Login</h2>
         <input
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -44,7 +44,9 @@ const Login = () => {
         />
         <button disabled={loading}>{loading ? "Loading..." : "Log in"}</button>
       </form>
-      <button onClick={() => navigate("/")}>Go Home</button>
+      <button style={{ "margin-top": 40 }} onClick={() => navigate("/")}>
+        Go Home
+      </button>
       <button onClick={() => navigate(-1)}>Go Back</button>
     </div>
   );

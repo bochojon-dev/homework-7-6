@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import "./Sidebar.css";
+import "../sidebar/Sidebar.css";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { IoCreateOutline } from "react-icons/io5";
 
@@ -29,6 +29,18 @@ const Sidebar = () => {
           <NavLink className={"sidebar_link"} to={"manage-product"}>
             <IoCreateOutline />
             <span>Manage Product</span>
+          </NavLink>
+        </li>
+        <li className="sidebar_item">
+          <NavLink className={"sidebar_link"} to={"create-user"}>
+            <IoCreateOutline />
+            <span>Create User</span>
+          </NavLink>
+        </li>
+        <li className="sidebar_item">
+          <NavLink className={"sidebar_link"} to={"manage-user"}>
+            <IoCreateOutline />
+            <span>Manage User</span>
           </NavLink>
         </li>
       </ul>

@@ -3,19 +3,18 @@
   position: sticky;
   top: 0;
   left: 0;
-  /* background: #222;
-  color: #fff; */
+  background: #ccc;
   padding: 30px 16px;
   overflow: hidden;
 }
-&__collection {
+.sidebar_collection {
   margin: 50px 0;
 }
-&__item {
+.sidebar_item {
   list-style: none;
 }
-&__logo,
-&__link {
+.sidebar_logo,
+.sidebar_link {
   display: flex;
   width: 100%;
   align-items: center;
@@ -27,16 +26,19 @@
   border-radius: 10px;
   transition: 0.3s;
   text-wrap: nowrap;
-  svg {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    font-size: 22px;
-    min-width: 26px;
-  }
 }
-&__link.active {
+svg {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  min-width: 26px;
+}
+.sidebar_link.active {
   background: #fff8;
-  color: #000;
+  color: #000 !important;
   padding: 10px;
+}
+.sidebar_link.active svg {
+  color: #000 !important;
 }

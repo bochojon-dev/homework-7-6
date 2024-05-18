@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: 300px 1fr;
   transition: 0.3s;
+  display: flex;
 }
-sidebar_navbar {
+.sidebar_navbar {
   display: flex;
   padding: 30px;
   justify-content: space-between;
